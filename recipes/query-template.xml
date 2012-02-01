@@ -1,0 +1,25 @@
+    <?xml version="1.0" encoding="UTF-8"?>
+    <orderly xmlns:xlink="http://www.w3.org/1999/xlink">
+    <configuration>
+        <query>
+            <tableId>{ENTER YOUR TABLE ID}</tableId>
+            <dimensions>{ENTER THE DIMENSIONS}</dimensions>
+            <metrics>{ENTER THE METRICS}}</metrics>
+            <segments>{OPTIONAL: ENTER THE SEGMENTS}</segments>
+            <filters>{OPTIONAL: ENTER THE FILTERS}</filters>
+            <sort>{OPTIONAL: ENTER SORT}</sort>
+            <start-date>{ENTER START DATE}</start-date>
+            <end-date>{ENTER START DATE}</end-date>
+            <start-index>{OPTIONAL: ENTER START DATE}</start-index>
+            <max-results>{OPTIONAL: ENTER END DATE}</max-results>
+        </query>
+        <login>
+            <userName>{ENTER YOUR GOOGLE ANALYTICS USERNAME HERE}</userName>
+            <password>{ENTER YOUR GOOGLE ANALYTICS PASSWORD HERE}</password>
+        </login>
+        <app>
+            <appName>ga-quick-data-grabber</appName>
+            <url>https://www.google.com/analytics/feeds/data</url>
+        </app>
+    </configuration>
+    </orderly>

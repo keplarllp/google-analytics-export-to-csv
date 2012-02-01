@@ -1,0 +1,14 @@
+.idea/
+.manager/
+workspace.xml
+*.iml
+bin/
+lib/
+docs/
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+outputFiles/
+output/

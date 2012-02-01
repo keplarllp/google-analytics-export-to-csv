@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orderly xmlns:xlink="http://www.w3.org/1999/xlink">
+<configuration>
+    <query>
+        <tableId>{ENTER YOUR TABLE ID HERE}</tableId>
+        <dimensions>ga:pagePath</dimensions>
+        <metrics>ga:visits,ga:visitors,ga:pageviews</metrics>
+        <segments></segments>
+        <filters></filters>
+        <sort>-ga:visitors</sort>
+        <start-date>2011-10-01</start-date>
+        <end-date>2012-01-10</end-date>
+        <start-index></start-index>
+        <max-results></max-results>
+    </query>
+    <login>
+        <userName>{ENTER YOUR GOOGLE ANALYTICS USERNAME HERE}</userName>
+        <password>{ENTER YOUR GOOGLE ANALYTICS PASSWORD HERE}</password>
+    </login>
+    <app>
+        <appName>google-analytics-export-to-csv</appName>
+        <url>https://www.google.com/analytics/feeds/data</url>
+    </app>
+</configuration>
+</orderly>
