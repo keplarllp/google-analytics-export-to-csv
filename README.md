@@ -1,13 +1,22 @@
 # Google Analytics export to CSV #
 
 ## Overview ##
-
 Google-Analytics-export-to-CSV is a **simple**, **command-line** tool for **exporting data out of Google Analytics** and writing it to a **CSV file**.
 
 Any query that can be executed against Google Analytics data via the API can be run using the tool. Each query is stored in its own XML files which details the metrics, dimensions, filters and segments are for each specific query. A number of sample queries (we call them "recipes") are included with the distribution.
 
 The tool is built in Scala. Dependencies are managed via SBT. It is compiled to a single JAR (using ProGuard). 
 
+## Quick start ##
+A compiled version of Google-Analytics-export-to-CSV can be downloaded directly from [here](https://github.com/datascience/google-analytics-export-to-csv/downloads) - click the "ga2csv-download.zip" link to initiate the download. 
+
+Unzip the downloaded file on your local disc. It contains:
+
+1.	The executable JAR file, `ga2csv-0.1.jar` can be run directly (details below)
+2.	A set of sample "recipes" (really queries) in `/recipes` folder
+3.	A step-by-step guide to using the tool called `Using Google-Analytics-export-to-CSV.pdf`
+
+Downloading the compiled version means you can get started crunching data straight away, without having to compile any source code first.
 
 
 ## How to Run ##
@@ -17,7 +26,6 @@ Running the export is a 2 step process:
 2.	Executing the query
 
 ### 1. Creating the query XML ###
-
 The query XML takes the form of 
 
     <?xml version="1.0" encoding="UTF-8"?>
