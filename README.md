@@ -128,10 +128,15 @@ The all-in-one JAR should be created in
 
 	/target/scala-2.9.1/google-analytics-export-to-cxv_2.9.1-0.1.min.jar
 
- 
-
 ## More information ##
-We plan to write some step-by-step tutorials to explain how this tool can be used in conjunction with a business intelligence like Tableau to provide insight that goes beyond what is possible with Google Analytics via the web interface. These will be published on the [Keplar blog](http://www.keplarllp.com/blog)
+We have written a set of step-by-step tutorials to explain how this tool can be used in conjunction with a business intelligence like Tableau to provide insight that goes beyond what is possible with Google Analytics via the web interface.
+
+These tutorials have been published as a blog post series on the [Keplar blog](http://www.keplarllp.com/blog):
+
+* [Introducing Google-Analytics-export-to-CSV] [blogintro]
+* [Installing Google-Analytics-export-to-CSV] [bloginstall]
+* [Using Google-Analytics-export-to-CSV: a step-by-step guide] [bloguse]
+* [Using Tableau and Google Analytics to analyse the drivers of growth in online retail] [blogtableau] 
 
 ## Contact ##
 
@@ -145,3 +150,8 @@ For questions, comments, feature requests, email yali.sassoon@keplarllp.com
 ## Copyright and License
 
 Google-Analytics-export-to-CSV is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+
+[blogintro]: http://www.keplarllp.com/blog/2012/01/introducing-google-analytics-export-to-csv-a-fast-simple-way-to-get-your-google-analytics-data-into-your-favourite-analytics-programme
+[bloginstall]: http://www.keplarllp.com/blog/2012/01/google-analytics-export-to-csv
+[bloguse]: http://www.keplarllp.com/blog/2012/01/using-google-analytics-export-to-csv-a-step-by-step-guide
+[blogtableau]: http://www.keplarllp.com/blog/2012/02/using-tableau-and-google-analytics-to-analyse-the-drivers-of-growth-in-online-retail
