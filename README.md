@@ -28,59 +28,63 @@ Running the export is a 2 step process:
 ### 1. Creating the query XML ###
 The query XML takes the form of 
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <orderly xmlns:xlink="http://www.w3.org/1999/xlink">
-    <configuration>
-        <query>
-            <tableId>{ENTER YOUR TABLE ID}</tableId>
-            <dimensions>{ENTER THE DIMENSIONS}</dimensions>
-            <metrics>{ENTER THE METRICS}}</metrics>
-            <segments>{OPTIONAL: ENTER THE SEGMENTS}</segments>
-            <filters>{OPTIONAL: ENTER THE FILTERS}</filters>
-            <sort>{OPTIONAL: ENTER SORT}</sort>
-            <start-date>{ENTER START DATE}</start-date>
-            <end-date>{ENTER START DATE}</end-date>
-            <start-index>{OPTIONAL: ENTER START DATE}</start-index>
-            <max-results>{OPTIONAL: ENTER END DATE}</max-results>
-        </query>
-        <login>
-            <userName>{ENTER YOUR GOOGLE ANALYTICS USERNAME HERE}</userName>
-            <password>{ENTER YOUR GOOGLE ANALYTICS PASSWORD HERE}</password>
-        </login>
-        <app>
-            <appName>ga-quick-data-grabber</appName>
-            <url>https://www.google.com/analytics/feeds/data</url>
-        </app>
-    </configuration>
-    </orderly>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<orderly xmlns:xlink="http://www.w3.org/1999/xlink">
+<configuration>
+<query>
+    <tableId>{ENTER YOUR TABLE ID}</tableId>
+    <dimensions>{ENTER THE DIMENSIONS}</dimensions>
+    <metrics>{ENTER THE METRICS}}</metrics>
+    <segments>{OPTIONAL: ENTER THE SEGMENTS}</segments>
+    <filters>{OPTIONAL: ENTER THE FILTERS}</filters>
+    <sort>{OPTIONAL: ENTER SORT}</sort>
+    <start-date>{ENTER START DATE}</start-date>
+    <end-date>{ENTER START DATE}</end-date>
+    <start-index>{OPTIONAL: ENTER START DATE}</start-index>
+    <max-results>{OPTIONAL: ENTER END DATE}</max-results>
+</query>
+<login>
+    <userName>{ENTER YOUR GOOGLE ANALYTICS USERNAME HERE}</userName>
+    <password>{ENTER YOUR GOOGLE ANALYTICS PASSWORD HERE}</password>
+</login>
+<app>
+    <appName>ga-quick-data-grabber</appName>
+    <url>https://www.google.com/analytics/feeds/data</url>
+</app>
+</configuration>
+</orderly>
+```
 
 Simply enter the relevant parameters into the XML and save the result. An example of a completed XML (without a valid username and password) is shown below:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <orderly xmlns:xlink="http://www.w3.org/1999/xlink">
-    <configuration>
-        <query>
-            <tableId>{ENTER YOUR TABLE ID HERE}</tableId>
-	<dimensions>ga:date,ga:visitCount,ga:source,ga:medium,ga:keyword,ga:adContent,ga:country</dimensions>
-            <metrics>ga:visitors,ga:newVisits,ga:visits,ga:pageviews,ga:totalEvents,ga:transactions,ga:itemQuantity,ga:transactionRevenue,ga:timeOnSite,ga:bounces</metrics>
-            <segments></segments>
-            <filters></filters>
-            <sort></sort>
-            <start-date>2011-11-01</start-date>
-            <end-date>2012-01-27</end-date>
-            <start-index></start-index>
-            <max-results></max-results>
-        </query>
-        <login>
-            <userName>{ENTER YOUR GOOGLE ANALYTICS USERNAME HERE}</userName>
-            <password>{ENTER YOUR GOOGLE ANALYTICS PASSWORD HERE}</password>
-        </login>
-        <app>
-            <appName>google-analytics-export-to-csv</appName>
-            <url>https://www.google.com/analytics/feeds/data</url>
-        </app>
-    </configuration>
-    </orderly>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<orderly xmlns:xlink="http://www.w3.org/1999/xlink">
+<configuration>
+<query>
+    <tableId>{ENTER YOUR TABLE ID HERE}</tableId>
+<dimensions>ga:date,ga:visitCount,ga:source,ga:medium,ga:keyword,ga:adContent,ga:country</dimensions>
+    <metrics>ga:visitors,ga:newVisits,ga:visits,ga:pageviews,ga:totalEvents,ga:transactions,ga:itemQuantity,ga:transactionRevenue,ga:timeOnSite,ga:bounces</metrics>
+    <segments></segments>
+    <filters></filters>
+    <sort></sort>
+    <start-date>2011-11-01</start-date>
+    <end-date>2012-01-27</end-date>
+    <start-index></start-index>
+    <max-results></max-results>
+</query>
+<login>
+    <userName>{ENTER YOUR GOOGLE ANALYTICS USERNAME HERE}</userName>
+    <password>{ENTER YOUR GOOGLE ANALYTICS PASSWORD HERE}</password>
+</login>
+<app>
+    <appName>google-analytics-export-to-csv</appName>
+    <url>https://www.google.com/analytics/feeds/data</url>
+</app>
+</configuration>
+</orderly>
+```
 
 Google provides an excellent [Data Feed Query Explorer](http://code.google.com/apis/analytics/docs/gdata/gdataExplorer.html) which makes putting together and testing queries before executing them in this tool very easy.
 
@@ -141,4 +145,3 @@ For questions, comments, feature requests, email yali.sassoon@keplarllp.com
 ## Copyright and License
 
 Google-Analytics-export-to-CSV is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
-https://github.com/datascience/google-analytics-export-to-csv
