@@ -147,6 +147,13 @@ For questions, comments, feature requests, email yali.sassoon@keplarllp.com
 1. Google [Data Feed Query Explorer](http://code.google.com/apis/analytics/docs/gdata/gdataExplorer.html)
 2.	Google [Core Reporting API documentation](http://code.google.com/apis/analytics/docs/gdata/v3/gdataGettingStarted.html)
 
+## Introducing SnowPlow ##
+
+Google Analytics export to CSV empowers data analysts by freeing their data from the constraints of the Google Analytics web UI, so they can analyse it in much more flexible ways using other tools. (E.g. Excel, R, Tableau.)
+
+A related project that may be of interest for data analysts interested in this project is [SnowPlow](https://github.com/snowplow/snowplow). SnowPlow is a web analytics platform that provides analysts with access to customer-level and event-level data, so they can perform much more sophisticated analyses than are possible using data fetched from Google Analytics. (Which is always aggregated.)
+
+
 ## Copyright and License
 
 Google-Analytics-export-to-CSV is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
