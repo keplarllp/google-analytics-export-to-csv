@@ -1,7 +1,7 @@
 # Google Analytics export to CSV #
 
 ## Overview ##
-Google-Analytics-export-to-CSV is a **simple**, **command-line** tool for **exporting data out of Google Analytics** and writing it to a **CSV file**.
+Google-Analytics-export-to-CSV is a simple, command-line tool for exporting data out of Google Analytics and writing it to a CSV file. Please note that Google Analytics only lets you export **aggregate data** - if you need access to raw clickstream data, please check out the [SnowPlow](https://github.com/snowplow/snowplow) sister project.
 
 Any query that can be executed against Google Analytics data via the API can be run using the tool. Each query is stored in its own XML files which details the metrics, dimensions, filters and segments are for each specific query. A number of sample queries (we call them "recipes") are included with the distribution.
 
