@@ -45,6 +45,12 @@ class GoogleAnalyticsExporter(configFile: String) {
   // Initialize the DataQuery
   protected val (analyticsQuery, maxResults) = initQuery(configXML)
 
+  // Configurable separator, comma by default
+  protected val separator = (configXML \ "configuration" \ "app" \ "separator" ).text match {
+    case "" => ","
+    case s : String => s
+  }
+
   // -------------------------------------------------------------------------------------------------------------------
   // Builders for the Google AnalyticsService and DataFeed
   // -------------------------------------------------------------------------------------------------------------------
@@ -184,10 +190,10 @@ class GoogleAnalyticsExporter(configFile: String) {
 
     val headerLine = new StringBuilder
     // Write titles of dimensions
-    if (!dimensions.isEmpty) { dimensions.map(dimension => (headerLine ++= (dimension.getName + ", "))) }
+    if (!dimensions.isEmpty) { dimensions.map(dimension => (headerLine ++= (dimension.getName + separator + " "))) }
     val metrics = r.getMetrics
     // Write title of metrics
-    metrics.map(metric => (headerLine ++= (metric.getName + ",")))
+    metrics.map(metric => (headerLine ++= (metric.getName + separator)))
     // Now remove trailing ",", then enter a LF, write the line to the file
     output.write( ((headerLine.dropRight(1)) ++= ("\n")).toString )
 
@@ -199,10 +205,10 @@ class GoogleAnalyticsExporter(configFile: String) {
         val dataLine = new StringBuilder
         // dimension values
         val dimensions = entry.getDimensions
-        if (!dimensions.isEmpty) { dimensions.map(dimension => (dataLine ++= (dimension.getValue + ","))) }
+        if (!dimensions.isEmpty) { dimensions.map(dimension => (dataLine ++= (dimension.getValue + separator))) }
         // metric values
         val metrics = entry.getMetrics
-        metrics.map(metric => (dataLine ++= (metric.getValue + ",")))
+        metrics.map(metric => (dataLine ++= (metric.getValue + separator)))
         // Now remove trailing ",", then enter a LF, write the line to the file
         output.write( (dataLine.dropRight(1) ++= ("\n")).toString )
       }
