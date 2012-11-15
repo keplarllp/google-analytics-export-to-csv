@@ -51,6 +51,7 @@ The query XML takes the form of
 <app>
     <appName>ga-quick-data-grabber</appName>
     <url>https://www.google.com/analytics/feeds/data</url>
+    <separator>;</separator>
 </app>
 </configuration>
 </orderly>
