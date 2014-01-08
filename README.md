@@ -39,6 +39,7 @@ The query XML takes the form of
     <segments>{OPTIONAL: ENTER THE SEGMENTS}</segments>
     <filters>{OPTIONAL: ENTER THE FILTERS}</filters>
     <sort>{OPTIONAL: ENTER SORT}</sort>
+    <userIp>{OPTIONAL: ENTER userIp}</userIp>
     <start-date>{ENTER START DATE}</start-date>
     <end-date>{ENTER START DATE}</end-date>
     <start-index>{OPTIONAL: ENTER START DATE}</start-index>
