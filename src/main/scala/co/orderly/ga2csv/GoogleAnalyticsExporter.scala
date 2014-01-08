@@ -90,6 +90,7 @@ class GoogleAnalyticsExporter(configFile: String) {
     val endDate = (configXML \ "configuration" \ "query" \ "end-date").text
     val maxResults = (configXML \ "configuration" \ "query" \ "max-results").text
     val url = (configXML \ "configuration" \ "app" \ "url").text
+    val userIp = (configXML \ "configuration" \ "query" \ "userIp").text
 
     // Build a new GA query using the specified URL
     val query = new DataQuery(new URL(url))
@@ -99,11 +100,12 @@ class GoogleAnalyticsExporter(configFile: String) {
     query.setEndDate(endDate)
     query.setMetrics(metrics)
     query.setIds(tableId)
-
+   
     // Populate optional parameters if specified
     if (!dimensions.isEmpty) query.setDimensions(dimensions)
     if (!filters.isEmpty) query.setFilters(filters)
     if (!sort.isEmpty) query.setSort(sort)
+    if (!userIp.isEmpty) query.setStringCustomParameter("userIp", userIp)
 
     // Check the maximum cap per run
     val mx =
